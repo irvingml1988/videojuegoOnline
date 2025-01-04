@@ -1,0 +1,141 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #021017;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .carrito-compras {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header .carrito-compras:hover {
+    color: #007bff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Header */
+
+/* Main */
+main {
+    padding: 1em;
+}
+
+main section {
+    margin-bottom: 2em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    background: #f9f9f9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #333;
+    color: #fff;
+}
+/* Footer */
+
+/*Tablas*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/*Tablas*/
+
+/*Texto*/
+.centerText {
+    text-align: center;
+}
+.justifyText {
+    text-align: justify;
+}
+/*Texto*/
+
+/*Imagen Kratos*/
+.center-image {
+    text-align: center;
+}
+
+.center-image img {
+    display: inline-block;
+    height: 15vmin;
+    pointer-events: none;
+}
+/*Imagen Kratos*/
+
+/*Detalle del juego*/
+.detalle-juego { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    margin-top: 20px; } 
+
+.detalle-juego img { 
+    max-width: 100px;
+    height: auto; 
+    margin-top: 10px; }
+/*Detalle del juego*/
