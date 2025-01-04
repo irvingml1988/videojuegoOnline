@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import useFiltro from './useFiltro';
 
 function Juegos({ setTotalArticulos, videojuegos, setVideojuegos, consolas }) {
-    const [busqueda, setBusqueda] = useState("");
+    const { busqueda, setBusqueda, itemsFiltrados: juegosFiltrados } = useFiltro(videojuegos, 'nombre');
     const [juegoSeleccionado, setJuegoSeleccionado] = useState(null);
 
     useEffect(() => {
@@ -35,10 +36,6 @@ function Juegos({ setTotalArticulos, videojuegos, setVideojuegos, consolas }) {
     const mostrarDetalle = (juego) => {
         setJuegoSeleccionado(juego);
     };
-
-    const juegosFiltrados = videojuegos.filter((juego) =>
-        juego.nombre.toLowerCase().includes(busqueda.toLowerCase())
-    );
 
     return (
         <section id="juegos">

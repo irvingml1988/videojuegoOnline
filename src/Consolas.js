@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import useFiltro from './useFiltro';
 
 function Consolas({ setTotalArticulos, consolas, setConsolas, videojuegos }) {
-    const [busqueda, setBusqueda] = useState("");
+    const { busqueda, setBusqueda, itemsFiltrados: consolasFiltradas } = useFiltro(consolas, 'nombre');
     const [consolaSeleccionada, setConsolaSeleccionada] = useState(null);
 
     useEffect(() => {
@@ -28,17 +29,9 @@ function Consolas({ setTotalArticulos, consolas, setConsolas, videojuegos }) {
         setTotalArticulos(totalJuegos + totalConsolas);
     };
 
-    const handleChange = (e) => {
-        setBusqueda(e.target.value);
-    };
-
     const mostrarDetalle = (consola) => {
         setConsolaSeleccionada(consola);
     };
-
-    const consolasFiltradas = consolas.filter((consola) =>
-        consola.nombre.toLowerCase().includes(busqueda.toLowerCase())
-    );
 
     return (
         <section id="consolas">
@@ -47,7 +40,7 @@ function Consolas({ setTotalArticulos, consolas, setConsolas, videojuegos }) {
                 type="text" 
                 placeholder="Buscar consolas..." 
                 value={busqueda}
-                onChange={handleChange}
+                onChange={(e) => setBusqueda(e.target.value)}
             />
             <table>
                 <caption>Lista de consolas</caption>
